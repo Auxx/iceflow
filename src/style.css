@@ -1,0 +1,104 @@
+* { font-family: inherit; }
+
+body {
+	background-color: #dee1e9;
+	color: #333;
+	width: 390px;
+	margin: 0 auto;
+	padding: 50px 0 0 0;
+	font-family: 'segoe ui', sans-serif;
+}
+
+.logo {
+	background: url(icons/64x64-icon.png) no-repeat;
+	padding-left: 68px;
+	height: 64px;
+	margin-bottom: 32px;
+}
+
+.logo h1 {
+	font-weight: normal;
+	margin: 0;
+	font-size: 30px;
+	text-shadow: 0px 1px 0px #FFF;
+}
+
+.logo p {
+	margin: 0;
+	font-size: 11px;
+}
+
+.logo p a {
+	font-weight: bold;
+	color: #258;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #FFF;
+}
+
+.panel {
+	background-color: #e9eaf0;
+	border-radius: 4px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #d8dae0;
+	display: none;
+}
+.panel.active { display: block; }
+
+fieldset {
+	border-left: 0 none #000;
+	border-right: 0 none #000;
+	border-bottom: 1px solid #d8dae0;
+	border-top: 0 none #000;
+	padding: 10px;
+	margin-bottom: 6px;
+}
+
+fieldset:last-of-type { border-bottom: 0 none #000; }
+
+fieldset legend {
+	font-family: Constantia, serif;
+	font-size: 20px;
+	padding-top: 7px;
+	text-shadow: 0px 1px 0px #FFF;
+}
+
+fieldset[disabled] {
+	color: #999;
+}
+
+fieldset label {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 4px;
+	margin-left: 6px;
+}
+
+ul.tabs {
+	margin: 0;
+	padding: 0 0 0 4px;
+	list-style-type: none;
+}
+
+ul.tabs li {
+	margin: 0;
+	padding: 1px 10px 3px 10px;
+	display: inline-block;
+	border-radius: 4px 4px 0 0;
+}
+
+ul.tabs li.active {
+	background-color: #e9eaf0;
+	border-top: 1px solid #d8dae0;
+}
+
+ul.tabs li a {
+	color: #258;
+	text-decoration: none;
+}
+
+.exceptions_list {
+	width: 310px;
+	height: 200px;
+}
+
+fieldset p:last-of-type { margin-bottom: 0; }

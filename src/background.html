@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="scripts/extension-grill-loader.php.js"></script>
+<script src="scripts/extension-grill.php.js"></script>
+<script src="scripts/config.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+	ExtensionGrill.messaging.listen(function(event) {
+		console.log('BG: ' + event.data)
+		ExtensionGrill.messaging.send(event.source, 'OK!')
+	})
+}, false)
+</script>
+
+</head>
+<body>
+</body>
+</html>

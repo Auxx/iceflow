@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iceflow configuration</title>
+<meta charset="UTF-8">
+<script src="scripts/extension-grill.php.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/jquery-1.8.0.min.js"></script>
+<script src="scripts/popup.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" media="all"/>
+</head>
+<body>
+
+	<div class="logo">
+		<h1>iceflow options</h1>
+		<p>by <a href="http://hexmode.org/" target="_blank">Aux</a></p>
+	</div>
+
+	<ul class="tabs">
+		<li class="active"><a href="#general">General</a></li>
+		<li><a href="#exceptions">Exception list</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+
+	<div class="panel active" id="general">
+		<fieldset>
+			<legend>iceflow is</legend>
+			<label>
+				<input type="radio" name="general_is_enabled" value="1" />
+				enabled
+			</label>
+			<label>
+				<input type="radio" name="general_is_enabled" value="0" />
+				disabled
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Player icon</legend>
+			<label>
+				<input type="radio" name="general_player_icon" value="1" />
+				always show
+			</label>
+			<label>
+				<input type="radio" name="general_player_icon" value="2" />
+				show for empty links only
+			</label>
+			<label>
+				<input type="radio" name="general_player_icon" value="0" />
+				always hide
+			</label>
+		</fieldset>
+		<fieldset id="general_open_player_by_fs">
+			<legend>Show iceflow clicking on</legend>
+			<label>
+				<input type="radio" name="general_open_player_by" value="link" />
+				original link
+			</label>
+			<label>
+				<input type="radio" name="general_open_player_by" value="icon" />
+				player icon
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Alt + Click...</legend>
+			<label>
+				<input type="radio" name="general_alt_click" value="1" />
+				opens link, Click opens iceflow
+			</label>
+			<label>
+				<input type="radio" name="general_alt_click" value="0" />
+				opens iceflow, Click opens link
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Additonal links for player popup</legend>
+			<label>
+				<input type="checkbox" name="general_add_link_goto" value="1" />
+				go to	video page
+			</label>
+			<label>
+				<input type="checkbox" name="general_add_link_flash" value="1" />
+				open Flash player in full tab
+			</label>
+			<p></p>
+			<label>
+				<input type="checkbox" name="general_add_link_popup" value="1" />
+				Open these links in new tab/window
+			</label>
+		</fieldset>
+		<fieldset>
+			<legend>Disable conflicting scripts</legend>
+			<label>
+				<input type="radio" name="general_disable_conflicts" value="1" />
+				oh yes!
+			</label>
+			<label>
+				<input type="radio" name="general_disable_conflicts" value="0" />
+				no
+			</label>
+		</fieldset>
+	</div>
+
+	<div class="panel" id="exceptions">
+		<fieldset>
+			<legend>List of exceptions, one per line</legend>
+			<textarea name="exceptions_list" class="exceptions_list"></textarea>
+			<p>
+				<button id="exceptions_btn_save">Save</button>
+				<button id="exceptions_btn_reset">Reset to defaults</button>
+			</p>
+		</fieldset>
+	</div>
+
+	<div class="panel" id="about">
+		<p>iceflow &mdash; an Opera extension for the masses!</p>
+		<p>Beta 4</p>
+	</div>
+
+</body>
+</html>
